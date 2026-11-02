@@ -11,8 +11,6 @@ from typing import Any
 
 import yaml
 
-DEFAULT_PROFILE = Path("data/profile.yaml")
-
 
 class ProfileError(ValueError):
     """The profile file is missing or doesn't match the expected format."""
@@ -86,10 +84,13 @@ def parse_profile(data: dict[str, Any]) -> Profile:
     )
 
 
-def load_profile(path: Path = DEFAULT_PROFILE) -> Profile:
+def load_profile(path: Path) -> Profile:
     """Read and validate the profile file."""
     if not path.exists():
-        raise ProfileError(f"{path} not found. Copy profile.example.yaml to {path} and fill it in.")
+        raise ProfileError(
+            f"{path} not found. Run `job-seeker profile import <your CV.pdf>`, "
+            f"or copy profile.example.yaml to {path} and fill it in."
+        )
     with path.open() as f:
         return parse_profile(yaml.safe_load(f))
 
