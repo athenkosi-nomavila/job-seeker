@@ -1,0 +1,25 @@
+# Copy this file to config.yaml and edit it. config.yaml is gitignored.
+
+search:
+  roles:
+    - backend developer
+    - frontend developer
+    - mobile developer
+  seniority: [junior, intermediate]
+  years_experience: 3
+
+  locations:
+    office: [Johannesburg, Pretoria]
+    remote: South Africa      # remote roles open to anyone in this country
+
+  # Sources that allow automated access. Each one is built in Phase 2.
+  sources:
+    adzuna: true              # free API, covers South Africa
+    greenhouse: []            # company board names, e.g. ["companyname"]
+    lever: []                 # company board names
+    remotive: true            # remote jobs, filtered to South Africa
+    linkedin_alert_emails: false  # reads LinkedIn job alert emails (no scraping)
+
+paths:
+  data_dir: data              # CV, database and generated files live here
+  cv: data/cv.pdf
