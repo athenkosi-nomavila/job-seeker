@@ -1,0 +1,36 @@
+# Copy this file to data/profile.yaml and fill it in with your own details.
+# data/ is gitignored, so your profile never gets committed.
+
+name: Jane Doe
+headline: Full-stack developer
+summary: >
+  Two or three sentences about who you are and what you've built.
+years_experience: 3
+
+contact:
+  email: jane@example.com
+  phone: "000 000 0000"
+  linkedin: linkedin.com/in/janedoe
+  portfolio: janedoe.dev
+
+skills: [Python, TypeScript, React, PostgreSQL]
+
+experience:
+  - title: Software Developer
+    company: Example Corp
+    start: Jan 2023
+    end: Present
+    tech: [Python, React]
+    highlights:
+      - What you built and the impact it had, with numbers where you can.
+
+projects:
+  - name: Side Project
+    description: One sentence on what it does and how.
+    tech: [Python]
+
+education:
+  - institution: Example College
+    qualification: Diploma in Software Development
+    start: "2020"
+    end: "2022"
