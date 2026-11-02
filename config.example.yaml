@@ -21,6 +21,4 @@ search:
     linkedin_alert_emails: false  # reads LinkedIn job alert emails (no scraping)
 
 paths:
-  data_dir: data              # CV, database and generated files live here
-  cv: data/cv.pdf
-  profile: data/profile.yaml
+  data_dir: data              # your profile, database and generated files live here

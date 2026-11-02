@@ -3,10 +3,8 @@
 import sqlite3
 from pathlib import Path
 
-DEFAULT_DB = Path("data/job_seeker.db")
 
-
-def connect(path: Path = DEFAULT_DB) -> sqlite3.Connection:
+def connect(path: Path) -> sqlite3.Connection:
     """Open the database, creating its folder if needed."""
     path.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(path)
