@@ -60,8 +60,11 @@ def _clean(lines: list[str]) -> list[str]:
     return [line for line in lines if line]
 
 
-def draft_profile(text: str) -> dict:
-    """Build a draft profile dict from CV text."""
+def draft_profile(text: str) -> tuple[dict, dict[str, list[str]]]:
+    """Build a draft profile dict from CV text.
+
+    Also returns the CV sections, so callers can show the parts that weren't parsed.
+    """
     header, sections = split_sections(text)
     header_text = "\n".join(header)
     name = next(iter(_clean(header)), "")
