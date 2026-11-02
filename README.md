@@ -29,7 +29,8 @@ pip install -e ".[dev]"
 
 cp config.example.yaml config.yaml   # edit roles, locations, sources
 cp .env.example .env                 # add API keys when a phase needs them
-mkdir -p data && cp profile.example.yaml data/profile.yaml  # fill in from your CV
+job-seeker profile import data/cv.pdf  # drafts data/profile.yaml from your CV (put your CV in data/ first)
+# ...or: mkdir -p data && cp profile.example.yaml data/profile.yaml  and fill it in by hand
 job-seeker profile                   # check it and print a summary
 job-seeker init                      # creates data/job_seeker.db
 ```
