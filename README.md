@@ -12,7 +12,7 @@ Each phase is delivered as small pull requests.
 | Phase | What | Command |
 |---|---|---|
 | 0 | Project skeleton, config, database, CI | `job-seeker init` |
-| 1 | Turn my CV into a structured profile | `job-seeker profile` |
+| 1 | Turn my CV into a structured profile (`profile.example.yaml`) | `job-seeker profile` |
 | 2 | Fetch jobs (Adzuna, Greenhouse, Lever, Remotive, LinkedIn alert emails) | `job-seeker fetch` |
 | 3 | Score jobs against my profile and shortlist them | `job-seeker match` |
 | 4 | Tailored CV and cover letter per job, written with Claude | `job-seeker tailor` |
@@ -29,6 +29,8 @@ pip install -e ".[dev]"
 
 cp config.example.yaml config.yaml   # edit roles, locations, sources
 cp .env.example .env                 # add API keys when a phase needs them
+mkdir -p data && cp profile.example.yaml data/profile.yaml  # fill in from your CV
+job-seeker profile                   # check it and print a summary
 job-seeker init                      # creates data/job_seeker.db
 ```
 
