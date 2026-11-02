@@ -1,0 +1,14 @@
+# Personal data: CV, database, generated letters. Never commit these.
+data/
+.env
+config.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
